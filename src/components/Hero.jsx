@@ -15,7 +15,7 @@ const Hero = ()=>{
   return(
     <div className=" w-full px-8 flex flex-col md:flex-row items-center mt-20 justify-center pt-24 gap-10 md:gap-40">
         <div className="md:hidden w-[200px]">
-            <img src="public/images/imagegirl.png" className="wavering-hover" alt="images goes here" />
+            <img src="/images/imagegirl.png" className="wavering-hover" alt="images goes here" />
         </div>
         <div className="w-full md:w-[300px] flex flex-col items-center justify-center gap-4 dark:text-white">
             <h1 className="font-bold text-[30px] text-center">
