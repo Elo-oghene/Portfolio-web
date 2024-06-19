@@ -1,4 +1,8 @@
 import React from "react";
+import pic1 from "/images/tie.png"
+import pic2 from "/images/calculator.png"
+import pic3 from "/images/grocery-cart.png"
+import pic4 from "/images/that.png"
 const Projects = ()=>{
     return(
         <div className="w-full lg:px-40 px-8 flex flex-col gap-10">
@@ -8,7 +12,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain transition ease-in-out duration-200 hover:scale-105"
-                        src="/images/tie.png"
+                        src={pic1}
                         alt="Project 1"
                     />
                 </div>
@@ -17,7 +21,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain transition ease-in-out duration-200 hover:scale-105"
-                        src="/images/grocery-cart.png"
+                        src={pic2}
                         alt="Project 1"
                     />
                 </div>
@@ -26,7 +30,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain"
-                        src="/images/calculator.png"
+                        src={pic3}
                         alt="Project 1"
                     />
                 </div>
@@ -35,7 +39,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[200px] md:h-[200px]rounded-lg object-contain"
-                        src="/images/hat.png"
+                        src={pic4}
                         alt="Project 1"
                     />
                 </div>
