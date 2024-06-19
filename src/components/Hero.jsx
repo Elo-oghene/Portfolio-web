@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import image from "/images/imagegirl.png"
-// import image from "../assets/images/imagegirl.png"
+import image from "../assets/images/imagegirl.png"
 import resumePDF from "../assets/resume.pdf"
 import { Typewriter } from 'react-simple-typewriter';
 const Hero = ()=>{
@@ -45,7 +44,7 @@ const Hero = ()=>{
 
         {/* images goes here */}
         <div className="hidden md:flex w-[350px]">
-            <img src="public/images/imagegirl.png" className="wavering-hover" alt="images goes here" />
+            <img src={image} className="wavering-hover" alt="images goes here" />
         </div>
     </div>
   )
