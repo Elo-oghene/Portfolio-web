@@ -1,4 +1,8 @@
 import React from "react";
+import pic1 from "../assets/images/tie.png"
+import pic2 from "../assets/images/calculator.png"
+import pic3 from "../assets/images/grocery-cart.png"
+import pic4 from "../assets/images/hat.png"
 const Projects = ()=>{
     return(
         <div className="w-full lg:px-40 px-8 flex flex-col gap-10">
@@ -8,7 +12,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain transition ease-in-out duration-200 hover:scale-105"
-                        src="src/assets/images/tile_5849877.png"
+                        src={pic1}
                         alt="Project 1"
                     />
                 </div>
@@ -17,7 +21,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain transition ease-in-out duration-200 hover:scale-105"
-                        src="src/assets/images/calculator-money_13794296.png"
+                        src={pic2}
                         alt="Project 1"
                     />
                 </div>
@@ -26,7 +30,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[150px] md:h-[200px] rounded-lg object-contain"
-                        src="src/assets/images/grocery-cart_6680480.png"
+                        src={pic3}
                         alt="Project 1"
                     />
                 </div>
@@ -35,7 +39,7 @@ const Projects = ()=>{
                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-white flex items-center justify-center dark:bg-white rounded-lg">
                     <img
                         className="w-[150px] md:w-[200px] h-[200px] md:h-[200px]rounded-lg object-contain"
-                        src="src/assets/images/mortarboard_123402.png"
+                        src={pic4}
                         alt="Project 1"
                     />
                 </div>

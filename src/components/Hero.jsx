@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image from "../assets/images/imagewithoutbg.png"
+import image from "../assets/images/imagegirl.png"
 import resumePDF from "../assets/resume.pdf"
 import { Typewriter } from 'react-simple-typewriter';
 const Hero = ()=>{
