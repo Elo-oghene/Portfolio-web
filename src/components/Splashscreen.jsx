@@ -1,8 +1,8 @@
 import React from "react";
 const Splashscreen = () =>{
     return(
-        <div className="bg-[#121212]">
-            <div className="text-white">Tina's Portfolio</div>
+        <div className="w-full h-[100vh] bg-[#121212] flex items-center justify-center ">
+            <div className="text-white text-[40px] text-animate">Tina's Portfolio</div>
         </div>
     )
 }
