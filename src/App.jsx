@@ -50,7 +50,7 @@ const App = () => {
   useLayoutEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 3000);
+    }, 7000);
     return () => clearTimeout(timer);
   }, []);
 
