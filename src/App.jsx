@@ -19,6 +19,7 @@ const App = () => {
   }, [theme]);
 
   useEffect(()=>{
+    console.log("splashscreen added")
     const timer = setTimeout(()=>{
       setShowSpash(false)
     },3000)

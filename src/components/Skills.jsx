@@ -43,7 +43,7 @@ const Skills = () => {
         </div>
         <div className="flex items-center justify-center">
           <i className='bx bx-check text-[30px] dark:text-white'></i>
-          <p className="text-[20px] ml-2 dark:text-white">Tailwind Csst</p>
+          <p className="text-[20px] ml-2 dark:text-white">Tailwind Css</p>
         </div>
         <hr className="w-full border-[#121212] dark:border-white my-8" />
       </div>
