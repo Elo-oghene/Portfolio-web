@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-  font:'Poppins' sans-serif;  
-}
-.font-poppins {
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font to all text within .font-poppins */
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-/* styles.css */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 40px;
@@ -29,9 +29,9 @@ body{
   transition: opacity 0.4s ease-in-out;
 }
 
-.scroll-to-top.dark{
+.scroll-to-top.dark {
   background-color: white;
-  color: #121212
+  color: #121212;
 }
 
 .scroll-to-top.show {
@@ -54,7 +54,7 @@ body{
 }
 
 .wavering-hover:hover {
-  animation: wavering 0.5s ease-in-out ;
+  animation: wavering 0.5s ease-in-out;
 }
 
 @keyframes text-animate {
@@ -73,5 +73,13 @@ body{
 }
 
 .text-animate {
-  animation: text-animate 2s ease-in-out;
+  animation: text-animate 3s ease-in-out;
+}
+
+.text-image {
+  background: url('/public/images/grocery-cart.png');
+  background-size: contain;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

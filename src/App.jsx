@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -8,19 +10,22 @@ import Splashscreen from "./components/Splashscreen";
 const App = () => {
   const [theme, setTheme] = useState("light");
   const [showScroll, setShowScroll] = useState(false);
-  const [showsplash,setShowSplash] = useState(true)
+  const [showsplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }, [theme]);
 
-  
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   const checkScrollTop = () => {
@@ -32,53 +37,50 @@ const App = () => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScrollTop);
+    window.addEventListener("scroll", checkScrollTop);
     return () => {
-      window.removeEventListener('scroll', checkScrollTop);
+      window.removeEventListener("scroll", checkScrollTop);
     };
   }, [showScroll]);
 
-  useLayoutEffect(()=>{
-    console.log("splashscreen added")
-      const timer = setTimeout(()=>{
-        setShowSplash(false)
-        return ()=> clearTimeout(timer)
-      },3000)
-  })
+  useLayoutEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  if(showsplash){
-    return(
-      <Splashscreen/>
-    )
+  if (showsplash) {
+    return <Splashscreen />;
   }
 
   return (
     <div className="w-full h-full light:bg-white dark:bg-gray-900 font-poppins">
       <button
-        className="absolute top-14 right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded"
+        className="fixed top-14 right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded"
         onClick={toggleTheme}
       >
         {theme === "light" ? (
-          <i className='bx bx-moon text-2xl'></i>
+          <i className="bx bx-moon text-2xl"></i>
         ) : (
-          <i className='bx bx-sun text-2xl'></i>
+          <i className="bx bx-sun text-2xl"></i>
         )}
       </button>
       <div className="flex flex-col gap-20 md:gap-20">
-        <Hero />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Hero data-aos="fade-up" />
+        <Projects data-aos="fade-up" />
+        <Skills data-aos="fade-down" />
+        <Contact data-aos="fade-up" />
       </div>
       <button
-        className={`scroll-to-top ${theme === 'dark' ? 'dark' : ''} ${showScroll ? 'show' : ''}`}
+        className={`scroll-to-top ${theme === "dark" ? "dark" : ""} ${showScroll ? "show" : ""}`}
         onClick={scrollToTop}
       >
-        <i className='bx bx-up-arrow-alt text-2xl'></i>
+        <i className="bx bx-up-arrow-alt text-2xl"></i>
       </button>
     </div>
   );
