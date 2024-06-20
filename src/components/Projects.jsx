@@ -1,8 +1,10 @@
 import React from "react";
-import pic1 from "/images/tie.png"
-import pic2 from "/images/calculator.png"
-import pic3 from "/images/grocery-cart.png"
-import pic4 from "/images/hat.png"
+import pic1 from "../../public/images/tie.png"
+import pic2 from "../../public/images/calculator.png"
+import pic3 from "../../public/images/grocery-cart.png"
+import pic4 from "../../public/images/hat.png"
+
+
 const Projects = ()=>{
     return(
         <div className="w-full lg:px-40 px-8 flex flex-col gap-10">
