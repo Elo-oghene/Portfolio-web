@@ -3,10 +3,12 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
+import Splashscreen from "./components/Splashscreen";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
   const [showScroll, setShowScroll] = useState(false);
+  const [showsplash,setShowSpash] = useState(true)
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -15,6 +17,13 @@ const App = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
+
+  useEffect(()=>{
+    const timer = setTimeout(()=>{
+      setShowSpash(false)
+    },3000)
+    return ()=> clearTimeout(timer);
+  },[])
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -38,6 +47,12 @@ const App = () => {
       window.removeEventListener('scroll', checkScrollTop);
     };
   }, [showScroll]);
+
+  if(showsplash){
+    return(
+      <Splashscreen/>
+    )
+  }
 
   return (
     <div className="w-full h-full light:bg-white dark:bg-gray-900 font-poppins">
