@@ -47,7 +47,7 @@ const App = () => {
       const timer = setTimeout(()=>{
         setShowSplash(false)
         return ()=> clearTimeout(timer)
-      },10000)
+      },3000)
   })
 
   if(showsplash){
