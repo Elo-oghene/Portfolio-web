@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
@@ -8,7 +8,7 @@ import Splashscreen from "./components/Splashscreen";
 const App = () => {
   const [theme, setTheme] = useState("light");
   const [showScroll, setShowScroll] = useState(false);
-  const [showsplash,setShowSpash] = useState(true)
+  const [showsplash,setShowSplash] = useState(true)
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -18,14 +18,7 @@ const App = () => {
     }
   }, [theme]);
 
-  useEffect(()=>{
-    console.log("splashscreen added")
-    const timer = setTimeout(()=>{
-      setShowSpash(false)
-    },3000)
-    return ()=> clearTimeout(timer);
-  },[])
-
+  
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
@@ -48,6 +41,14 @@ const App = () => {
       window.removeEventListener('scroll', checkScrollTop);
     };
   }, [showScroll]);
+
+  useLayoutEffect(()=>{
+    console.log("splashscreen added")
+      const timer = setTimeout(()=>{
+        setShowSplash(false)
+        return ()=> clearTimeout(timer)
+      },10000)
+  })
 
   if(showsplash){
     return(
