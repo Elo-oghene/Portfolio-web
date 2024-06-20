@@ -18,7 +18,7 @@ const Hero = ()=>{
             <img src={image}className="wavering-hover" alt="images goes here" />
         </div>
         <div className="w-full md:w-[300px] flex flex-col items-center justify-center gap-4 dark:text-white">
-            <h1 className="font-bold text-[30px] text-center text-[#3c3c3c]">
+            <h1 className="font-bold text-[30px] text-center text-[#3c3c3c] dark:text-white">
             <Typewriter
             words={['CHRISTOPHER TINA']}
             loop={2}
@@ -30,14 +30,14 @@ const Hero = ()=>{
             onLoopDone={() => setTimeout(() => setShowCursor(false), 500)} 
           />
             </h1>
-            <span className="text-lg tracking-wider text-[#3c3c3c]">FRONTEND DEVELOPER</span>
+            <span className="text-lg tracking-wider text-[#3c3c3c] dark:text-white">FRONTEND DEVELOPER</span>
             <div className="flex gap-6">
                 <a href="https://wa.me/2347080587195" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp text-[30px]'></i></a>
                 <a href="https://www.linkedin.com/in/Olokor"><i class='bx bxl-linkedin text-[30px]' ></i></a>
                 <a href="https://github.com/Elo-oghene"><i class='bx bxl-github text-[30px]' ></i></a>
                 
             </div>
-            <p className="text-sm md:text-xl tracking-wider text-center text-[#3c3c3c]">With a passion for developing modern React web apps for commercial businesses.</p>
+            <p className="text-sm md:text-xl tracking-wider text-center text-[#3c3c3c] dark:text-white">With a passion for developing modern React web apps for commercial businesses.</p>
             <button className="bg-[#eb8346] px-8 py-3 rounded-lg text-white transition ease-in-out duration-200 hover:scale-105" onClick={handleDownload}>Resume</button>
         </div>
 
