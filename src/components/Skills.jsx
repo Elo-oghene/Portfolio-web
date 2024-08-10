@@ -49,11 +49,11 @@ const Skills = () => {
       </div>
 
       <div className="flex flex-wrap gap-8 mt-4 justify-center">
-        <div className="flex items-center justify-center">
+        {/* <div className="flex items-center justify-center">
           <i className='bx bx-check text-[30px] dark:text-white'></i>
           <p className="text-[15px] md:text-[20px] ml-2 dark:text-white">Redux</p>
-        </div>
-        <div className="flex items-center justify-center">
+        </div> */}
+        {/* <div className="flex items-center justify-center">
           <i className='bx bx-check text-[30px] dark:text-white'></i>
           <p className="text-[15px] md:text-[20px] ml-2 dark:text-white">Webpack</p>
         </div>
@@ -68,7 +68,7 @@ const Skills = () => {
         <div className="flex items-center justify-center">
           <i className='bx bx-check text-[30px] dark:text-white'></i>
           <p className="text-[15px] md:text-[20px] ml-2 dark:text-white">Bootsrap</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

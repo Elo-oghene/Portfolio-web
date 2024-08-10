@@ -14,7 +14,7 @@ const Hero = ()=>{
       };
   return(
     <div className=" w-full px-8 flex flex-col md:flex-row items-center mt-20 justify-center pt-24 gap-10 md:gap-40" data-aos="fade-up">
-        <div className="md:hidden w-[200px]">
+        <div className="md:hidden w-[200px]` ">
             <img src={image}className="wavering-hover" alt="images goes here" />
         </div>
         <div className="w-full md:w-[300px] flex flex-col items-center justify-center gap-4 dark:text-white">
